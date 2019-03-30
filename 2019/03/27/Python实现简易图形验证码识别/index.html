@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码 1234from claptcha import Claptchac = Claptcha(&quot;q6jn&quot;, &quot;C:">
+<meta name="description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码">
 <meta name="keywords" content="好玩">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python实现简易图形验证码识别">
 <meta property="og:url" content="http://yoursite.com/2019/03/27/Python实现简易图形验证码识别/index.html">
 <meta property="og:site_name" content="LinoX的个人博客">
-<meta property="og:description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码 1234from claptcha import Claptchac = Claptcha(&quot;q6jn&quot;, &quot;C:">
+<meta property="og:description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/Python实现简易图形验证码识别/q6jn.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/Python实现简易图形验证码识别/q6jn_1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/Python实现简易图形验证码识别/q6jn_2.png">
-<meta property="og:updated_time" content="2019-03-30T03:27:30.626Z">
+<meta property="og:updated_time" content="2019-03-30T03:29:53.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python实现简易图形验证码识别">
-<meta name="twitter:description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码 1234from claptcha import Claptchac = Claptcha(&quot;q6jn&quot;, &quot;C:">
+<meta name="twitter:description" content="突然发现自己写的爬虫都不带验证码识别，心血来潮学一学简单的识别原理（基础版   = v =）  准备工具 Python3.6 库：PIL(用于处理图片) &amp;amp; tesserocr(用于识别)  &amp;amp;  claptcha(用于生成验证码)    STEP 1：生成一张验证码">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/27/Python实现简易图形验证码识别/q6jn.png">
 
 
@@ -338,6 +338,7 @@
 </li>
 </ul>
 <p><strong>STEP 1：生成一张验证码</strong></p>
+<a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> claptcha <span class="keyword">import</span> Claptcha</span><br><span class="line">c = Claptcha(<span class="string">"q6jn"</span>, <span class="string">"C:\Windows\Fonts\consola.ttf"</span>, noise=<span class="number">0.5</span>)</span><br><span class="line">t, _ = c.write(<span class="string">"q6jn.png"</span>)</span><br><span class="line"><span class="comment"># 目录下会多出一张图如下</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2019/03/27/Python实现简易图形验证码识别/q6jn.png" alt></p>
 <p><strong>可以看到有一段干扰线，接下来的事情就是尽量让所有有效元素凸显出来</strong></p>
