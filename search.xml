@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>什么？！你的Unipus不安全？！</title>
+      <link href="/2019/04/02/BreakUnipus/"/>
+      <url>/2019/04/02/BreakUnipus/</url>
+      
+        <content type="html"><![CDATA[<p><strong>众所周知，破解各大学习平台和校园办公网是广大计算机学子喜闻乐见的事</strong></p><p><strong>那么，攻击一个网站最简单的方式就是进行SQL注入或XSS攻击</strong></p><ul><li>SQL注入攻击<ul><li>所谓SQL注入，就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令</li></ul></li></ul><a id="more"></a><ul><li>什么时候最容易受到SQL注入攻击<ul><li>登录</li><li>查询</li></ul></li><li>例子<ul><li>假设我们的输入的用户名为<code>xiaoming</code> 密码为<code>&#39;123456&#39;</code>  来看一条正常的SQL语句<code>SELECT * FROM User WHERE username=&#39;biao&#39; AND password=&#39;123456&#39;</code>执行完成之后便会获得’xiaoming’的用户信息，那么如果未进行SQL注入防御的话，我只需要在填写密码的时候输入<code>&quot; &#39;or 1 or&#39; &quot;</code>注意左右是带两个单引号的，那么SQL语句就会变为<code>SELECT * FROM User WHERE username=&#39;biao&#39; AND password=&#39;&#39;or 1 or&#39;&#39;</code> 这样就够造成了一个永真式，依然可以获得’xiaoming’的用户信息</li></ul></li></ul><p><strong>经高人指导，得知我校Unipus平台是可以进行SQL注入的，而且这网站数据库的Debug没关，这就为攻破带了了更多方便的地方</strong></p><ul><li>先随便攻击一下试试，输入<code>&#39;a&#39;</code></li></ul><p><img src="/2019/04/02/BreakUnipus/TIM截图20190402223955.png" alt></p><p><strong>可以看到红线部分组成为 单引号’a’单引号，其中的’a’就是刚才输入的东西，接下来开始构造攻击语句</strong></p><p>在密码框中输入<code>&#39;or 1 or&#39;</code>注意左右两边一定要有单引号，且1左右各有一个空格，接下来就可进入任何已知学号人的Unipus平台</p><p><strong>PS：虽然进去也没啥卵用，不过可以偷偷看到你好奇的学号的名字哟~</strong></p><p>end</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 武林秘籍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python实现简易图形验证码识别</title>
       <link href="/2019/03/27/Python%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/"/>
       <url>/2019/03/27/Python%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/</url>
