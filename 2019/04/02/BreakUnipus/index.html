@@ -88,7 +88,7 @@
 <meta property="og:description" content="众所周知，破解各大学习平台和校园办公网是广大计算机学子喜闻乐见的事 那么，攻击一个网站最简单的方式就是进行SQL注入或XSS攻击  SQL注入攻击 所谓SQL注入，就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/02/BreakUnipus/TIM截图20190402223955.png">
-<meta property="og:updated_time" content="2019-04-02T14:48:12.284Z">
+<meta property="og:updated_time" content="2019-04-07T02:50:13.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么？！你的Unipus不安全？！">
 <meta name="twitter:description" content="众所周知，破解各大学习平台和校园办公网是广大计算机学子喜闻乐见的事 那么，攻击一个网站最简单的方式就是进行SQL注入或XSS攻击  SQL注入攻击 所谓SQL注入，就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令">
@@ -343,7 +343,7 @@
 </ul>
 </li>
 <li>例子<ul>
-<li>假设我们的输入的用户名为<code>xiaoming</code> 密码为<code>&#39;123456&#39;</code>  来看一条正常的SQL语句<code>SELECT * FROM User WHERE username=&#39;biao&#39; AND password=&#39;123456&#39;</code>执行完成之后便会获得’xiaoming’的用户信息，那么如果未进行SQL注入防御的话，我只需要在填写密码的时候输入<code>&quot; &#39;or 1 or&#39; &quot;</code>注意左右是带两个单引号的，那么SQL语句就会变为<code>SELECT * FROM User WHERE username=&#39;biao&#39; AND password=&#39;&#39;or 1 or&#39;&#39;</code> 这样就够造成了一个永真式，依然可以获得’xiaoming’的用户信息</li>
+<li>假设我们的输入的用户名为<code>xiaoming</code> 密码为<code>&#39;123456&#39;</code>  来看一条正常的SQL语句<code>SELECT * FROM User WHERE username=&#39;xiaoming&#39; AND password=&#39;123456&#39;</code>执行完成之后便会获得’xiaoming’的用户信息，那么如果未进行SQL注入防御的话，我只需要在填写密码的时候输入<code>&quot; &#39;or 1 or&#39; &quot;</code>注意左右是带两个单引号的，那么SQL语句就会变为<code>SELECT * FROM User WHERE username=&#39;biao&#39; AND password=&#39;&#39;or 1 or&#39;&#39;</code> 这样就够造成了一个永真式，依然可以获得’xiaoming’的用户信息</li>
 </ul>
 </li>
 </ul>
