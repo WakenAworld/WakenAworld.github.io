@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Redis学习笔记</title>
+      <link href="/2019/05/23/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2019/05/23/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Redis-启动问题"><a href="#Redis-启动问题" class="headerlink" title="Redis 启动问题"></a>Redis 启动问题</h1><p><strong><code>Creating Server TCP listening socket 127.0.0.1:6379: bind: No error</code></strong></p><h4 id="分为三步"><a href="#分为三步" class="headerlink" title="分为三步"></a>分为三步</h4><ul><li>redis-cli.exe</li><li>shutdown</li><li>exit</li></ul><h1 id="Redis-数据类型"><a href="#Redis-数据类型" class="headerlink" title="Redis 数据类型"></a>Redis 数据类型</h1><h2 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String(字符串)"></a>String(字符串)</h2><p>`</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; SET name &quot;runoob&quot;</span><br><span class="line">OK</span><br><span class="line">redis 127.0.0.1:6379&gt; GET name</span><br><span class="line">&quot;runoob&quot;</span><br></pre></td></tr></table></figure><p>`</p><ul><li>设置指定key的值<code>SET key value</code></li><li>获取指定key的值<code>GET key</code></li><li>将给定key的值设为value，并返回key的旧值<code>GETSET key value</code></li><li>获取一个或多个给定key的值<code>MGET key1[key2..]</code></li><li>将值关联到key，并将key的过期时间设为seconds<code>SETEX key seconds value</code></li><li>只有在key不存在时设置key的值<code>SETNX key value</code></li><li>返回key所储存的字符串值的长度<code>STRLEN key</code></li><li>删除使用<code>DEL keyname</code>  </li></ul><h2 id="Hash-哈希"><a href="#Hash-哈希" class="headerlink" title="Hash(哈希)"></a>Hash(哈希)</h2><p>`</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; DEL runoob</span><br><span class="line">redis 127.0.0.1:6379&gt; HMSET myhash field1 &quot;Hello&quot; field2 &quot;World&quot;</span><br><span class="line">&quot;OK&quot;</span><br><span class="line">redis 127.0.0.1:6379&gt; HGET myhash field1</span><br><span class="line">&quot;Hello&quot;</span><br><span class="line">redis 127.0.0.1:6379&gt; HGET myhash field2</span><br><span class="line">&quot;World&quot;</span><br></pre></td></tr></table></figure><p>`</p><ul><li>删除一个或多个哈希表字段<code>HEDL key field1[field2..]</code></li><li>查看哈希表key中，指定的字段是否存在<code>HEXISTS key field</code></li><li>获取存储在哈希表中指定字段的值<code>HGET key field</code></li><li>获取在哈希表中指定key的所有字段和值<code>HGETALL key</code></li><li>获取所有哈希表中的字段<code>HKEYS key</code></li><li>获取哈希表中字段的数量<code>HLEN key</code></li><li>将哈希表key中的字段field的值设为value<code>HSET key field value</code></li><li>批量赋值<code>HMSET key field1 value1 [field2 value2]</code></li><li>只有在字段field不存在时，设置哈希表字段的值<code>HSETNX key field value</code></li></ul><h2 id="List-列表"><a href="#List-列表" class="headerlink" title="List(列表)"></a>List(列表)</h2><h2 id="Set-集合"><a href="#Set-集合" class="headerlink" title="Set(集合)"></a>Set(集合)</h2><h2 id="zset-有序集合"><a href="#zset-有序集合" class="headerlink" title="zset(有序集合)"></a>zset(有序集合)</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>什么？！你的Unipus不安全？！</title>
       <link href="/2019/04/02/BreakUnipus/"/>
       <url>/2019/04/02/BreakUnipus/</url>
